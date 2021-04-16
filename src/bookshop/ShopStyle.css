@@ -1,0 +1,22 @@
+
+.root{ 
+-fx-background-color:lavender;
+}
+
+.button{
+    -fx-border-style:solid;
+    -fx-border-color:lightpink;
+    -fx-border-width: 2px;
+    -fx-text-fill:palevioletred;    
+    -fx-font-family: 'serif';
+    -fx-font-size:10pt;
+    -fx-font-style: italic;
+    -fx-font-weight: bold;
+}
+
+.label{
+   -fx-text-fill:darkslategray; 
+   -fx-font-weight: bold;
+   -fx-font-size:10pt;
+}
+

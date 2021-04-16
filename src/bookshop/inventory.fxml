@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?> 
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import java.net.* ?>
+
+
+<GridPane id="AnchorPane" prefHeight="400.0" prefWidth="1000.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookshop.InventoryController">
+
+    <stylesheets>
+        <URL value="@ShopStyle.css"/>
+    </stylesheets>
+    
+    
+<columnConstraints>
+    <ColumnConstraints percentWidth="50.0" />
+    <ColumnConstraints percentWidth="50.0" />
+</columnConstraints>   
+
+ <padding> 
+        <Insets top="30" bottom="30" right="30" left="30" /> 
+ </padding> 
+
+<children>
+    <Label text="Book Name" GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.halignment="LEFT" /> 
+    
+    <Label text="Enter Book Name to Search" GridPane.rowIndex="0" GridPane.columnIndex="1" GridPane.halignment="LEFT" />
+     
+    <Label text="Author Name" GridPane.rowIndex="1" GridPane.columnIndex="0" GridPane.halignment="LEFT" >  
+    <GridPane.margin>
+      <Insets  top="5"/>
+    </GridPane.margin>
+    </Label> 
+    
+    <Label text="Price of Book" GridPane.rowIndex="2" GridPane.columnIndex="0" GridPane.halignment="LEFT" >  
+    <GridPane.margin>
+      <Insets  top="5"/>
+    </GridPane.margin>
+    </Label>
+    <Label text="Number of books in stock" GridPane.rowIndex="3" GridPane.columnIndex="0" GridPane.halignment="LEFT" > 
+    <GridPane.margin>
+      <Insets  right="200"/>
+    </GridPane.margin>
+    </Label>
+    
+    <TextField fx:id="txtBkname" GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.halignment="RIGHT">
+    <GridPane.margin>
+      <Insets  left="180" right="80" />
+    </GridPane.margin>
+    </TextField>
+    
+    <TextField fx:id="txtsrchname" GridPane.rowIndex="0" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+    <GridPane.margin>
+      <Insets  left="200" right="80" />
+    </GridPane.margin>
+    </TextField>
+    
+    <Button fx:id="search"  text="SEARCH" onAction="#search"  GridPane.rowIndex="0" GridPane.columnIndex="1" GridPane.halignment="RIGHT"/>
+
+
+    <TextField fx:id="txtauthname" GridPane.rowIndex="1" GridPane.columnIndex="0" GridPane.halignment="RIGHT">
+    <GridPane.margin>
+      <Insets  left="180" right="80" top="10"/>
+    </GridPane.margin>
+    </TextField>
+    
+    <TextField fx:id="txtprcname" GridPane.rowIndex="2" GridPane.columnIndex="0" GridPane.halignment="RIGHT">
+    <GridPane.margin>
+      <Insets  left="180" right="80" top="10"/>
+    </GridPane.margin>
+    </TextField>
+    
+    <TextField fx:id="txtnumbk" GridPane.rowIndex="3" GridPane.columnIndex="0" GridPane.halignment="RIGHT">
+    <GridPane.margin>
+      <Insets  left="180" right="80" top="10"/>
+    </GridPane.margin>
+    </TextField>
+    
+<!--    buttons-->
+    
+    <Button fx:id="btnadd"  text="ADD" onAction="#add"  GridPane.rowIndex="4" GridPane.columnIndex="0" GridPane.halignment="LEFT">
+    <GridPane.margin>
+      <Insets top="30" left="20"/>
+    </GridPane.margin>
+    </Button>
+<!--    -->
+
+    <Button fx:id="btnsave"  text="SAVE"  onAction="#save"  GridPane.rowIndex="4" GridPane.columnIndex="0" GridPane.halignment="LEFT">
+    <GridPane.margin>
+      <Insets top="30" left="100"/>
+    </GridPane.margin>
+    </Button>
+<!--   -->
+
+    <Button fx:id="btnexit"  text="EXIT" onAction="#exit"  GridPane.rowIndex="4" GridPane.columnIndex="0" GridPane.halignment="LEFT"> 
+    <GridPane.margin>
+      <Insets top="30" left="190" />
+    </GridPane.margin>
+    </Button>
+<!--   -->
+
+    <Button fx:id="btnwrite"  text="WRITE" onAction="#write" GridPane.rowIndex="4" GridPane.columnIndex="0" GridPane.halignment="RIGHT"> 
+    <GridPane.margin>
+      <Insets top="30" right="140" />
+    </GridPane.margin>
+    </Button>
+<!--    -->
+
+    <Button fx:id="btnnext"  text="NEXT" onAction="#next" GridPane.rowIndex="5" GridPane.columnIndex="0" GridPane.halignment="LEFT"> 
+    <GridPane.margin>
+      <Insets top="30" left="20"/>
+    </GridPane.margin>
+    </Button>
+<!--    -->
+    
+    <Button fx:id="btnprevious"  text="PREVIOUS" onAction="#previous" GridPane.rowIndex="5" GridPane.columnIndex="0" GridPane.halignment="LEFT"> 
+    <GridPane.margin>
+      <Insets top="30" left="90" />
+    </GridPane.margin>
+    </Button>
+<!--    -->  
+  
+    <Button fx:id="btnedit"  text="EDIT" onAction="#edit"  GridPane.rowIndex="5" GridPane.columnIndex="0" GridPane.halignment="LEFT">
+    <GridPane.margin>
+      <Insets top="30"  left="190"/>
+    </GridPane.margin>
+    </Button>   
+<!--    -->
+
+    <Button fx:id="btndisplay"  text="DISPLAY" onAction="#display" GridPane.rowIndex="5" GridPane.columnIndex="0" GridPane.halignment="RIGHT">
+    <GridPane.margin>
+      <Insets top="30" right="140"/>
+    </GridPane.margin>
+    </Button>
+<!--    -->
+
+    <ListView fx:id="lstview"  GridPane.rowIndex="1" GridPane.columnIndex="1"  GridPane.rowSpan="6">  
+         <GridPane.margin>
+       <Insets top="30"/>
+    </GridPane.margin> 
+    </ListView>
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</children>
+
+</GridPane>
